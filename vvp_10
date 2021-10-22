@@ -1,0 +1,80 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace vvp_zadanie10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Даны два целых числа: A, B. Проверить истинность высказывания: «Справедливы неравенства A > 2 и B ≤ 3»");
+            Console.WriteLine("Введите два целых числа");
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            Console.WriteLine("Данное выражение  " + ((a > 2)&&(b <= 3)));
+
+            Console.WriteLine();
+
+            Console.WriteLine("Даны три целых числа: A, B, C. Проверить истинность высказывания: «Справедливо двойное неравенство A < B < C»");
+            Console.WriteLine("Введете три целых числа");
+            a = int.Parse(Console.ReadLine());
+            b = int.Parse(Console.ReadLine());
+            int c = int.Parse(Console.ReadLine());
+            Console.WriteLine("Справедливо двойное неравенство A < B < C "+ ((a<b)&&(b<c)));
+            Console.WriteLine();
+
+            Console.WriteLine("Дано целое положительное число. Проверить истинность высказывания: «Данное число является четным двузначным».");
+            Console.WriteLine("Введите целое число");
+            a = int.Parse(Console.ReadLine());
+            if ((a%2==0)&&(a/100==0)&&(a/10!=0))
+                Console.WriteLine("Это число четное двузначное");
+            else Console.WriteLine("Это число не четное и двузначное");
+            Console.WriteLine();
+
+            Console.WriteLine("Дано трехзначное число. Проверить истинность высказывания: «Цифры данного числа образуют возрастающую или убывающую последовательность».");
+            Console.WriteLine("Введите целое трехзначное число");
+             string chislo = Console.ReadLine();
+            int cifra1 = Convert.ToInt32(chislo[0]);
+            int cifra2 = Convert.ToInt32(chislo[1]);
+            int cifra3 = Convert.ToInt32(chislo[2]);
+            if (((cifra1 < cifra2) && (cifra2 < cifra3)) || ((cifra1 > cifra2) && (cifra2 > cifra3)))
+                Console.WriteLine("Цифры данного числа образуют возрастающую или убывающую последовательность");
+            else Console.WriteLine("Цифры данного числа не образуют возрастающую или убывающую последовательность");
+            Console.WriteLine();
+
+            Console.WriteLine("Дано четырехзначное число. Проверить истинность высказывания: «Данное число читается одинаково слева направо и справа налево».");
+            Console.WriteLine("Введите целое четырехзначное число");
+             chislo = Console.ReadLine();
+             cifra1 = Convert.ToInt32(chislo[0]);
+             cifra2 = Convert.ToInt32(chislo[1]);
+             cifra3 = Convert.ToInt32(chislo[2]);
+            int cifra4 = Convert.ToInt32(chislo[3]);
+            if ((cifra1==cifra4)&&(cifra2==cifra3))
+                Console.WriteLine("Данное число читается одинаково слева направо и справа налево");
+            else Console.WriteLine("Данное число не читается одинаково слева направо и справа налево");
+
+            Console.WriteLine("Даны целые числа a, b, c, являющиеся сторонами некоторого треугольника. Проверить истинность высказывания: «Треугольник со сторонами a, b, c является прямоугольным».");
+            Console.WriteLine("Введите стороны треугольника по возрастанию");
+            double e = double.Parse(Console.ReadLine());
+            double q = double.Parse(Console.ReadLine()); 
+            double w = double.Parse(Console.ReadLine());
+            if (w*w==(e*e + q*q))
+                Console.WriteLine("Треугольник со сторонами a, b, c является прямоугольным");
+            else Console.WriteLine("Треугольник со сторонами a, b, c не является прямоугольным");
+            Console.WriteLine();
+
+            Console.WriteLine("Даны целые числа a, b, c. Проверить истинность высказывания: «Существует треугольник со сторонами a, b, c».");
+            Console.WriteLine("Введите три числа a, b, c по возрастанию");
+            e = double.Parse(Console.ReadLine());
+            q = double.Parse(Console.ReadLine());
+            w = double.Parse(Console.ReadLine());
+            if (w * w <= (e * e + q * q))
+                Console.WriteLine("Существует треугольник со сторонами a, b, c");
+            else Console.WriteLine("Треугольника со сторонами a, b, c не существует");
+            Console.WriteLine();
+        }
+    }
+}
