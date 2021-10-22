@@ -1,0 +1,71 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace vvp_zadanie9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(" С начала суток прошло N секунд (N — целое). Найти количество секунд, прошедших с начала последней минуты");
+            Console.WriteLine("Введите количество секунд, прошедших с начала дня");
+            int N = int.Parse(Console.ReadLine());
+            Console.WriteLine("Количество секунд, прошедших с начала последней минуты равно "+ N %60);
+            Console.WriteLine();
+
+            Console.WriteLine("Дни недели пронумерованы следующим образом: 0 — воскресенье, 1 — понедельник, 2 — вторник, . . . , 6 — суббота. Дано целое число K, лежащее в диапазоне 1–365. Определить номер дня недели для K-го дня года, если известно, что в этом году 1 января было понедельником");
+            Console.WriteLine("Введите целое число K, лежащее в диапазоне 1–365");
+            int k = int.Parse(Console.ReadLine());
+            Console.WriteLine("День недели K-го дня в году:"+ k % 7);
+            Console.WriteLine();
+
+            Console.WriteLine("Дни недели пронумерованы следующим образом: 1 — понедельник, 2 — вторник, . . . , 6 — суббота, 7 — воскресенье. Дано целое число K, лежащее в диапазоне 1–365, и целое число N, лежащее в диапазоне 1–7. Определить номер дня недели для K-го дня года, если известно, что в этом году 1 января было днем недели с номером N");
+            Console.WriteLine("Введите целое число K, лежащее в диапазоне 1–365");
+             k = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите целое число N, лежащее в диапазоне 1–7");
+            int n = int.Parse(Console.ReadLine());
+            if (((((k + n) % 7) - 1) != 0) && ((((k + n) % 7) - 1) != -1))
+            {
+                Console.WriteLine("День недели K-го дня в году:" + (((k + n) % 7) - 1));
+                Console.WriteLine();
+            }
+            else if ((((k + n) % 7) - 1) == 0)
+                Console.WriteLine("День недели K-го дня в году:" + 7);
+            else   Console.WriteLine("День недели K-го дня в году:" + 6);
+            Console.WriteLine();
+
+
+            Console.WriteLine("Даны целые положительные числа A, B, C. На прямоугольнике размера A × B размещено максимально возможное количество квадратов со стороной C (без наложений). Найти количество квадратов, размещенных на прямоугольнике, а также площадь незанятой части прямоугольника");
+            Console.WriteLine("Введите длину прямоугольника");
+            int dlina = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите ширину прямоугольника");
+            int shirina = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите сторону квадрата");
+            int storona = int.Parse(Console.ReadLine());
+            if ((storona<dlina)&&(storona<shirina))
+            {
+                int S_pr = dlina * shirina;
+                int S_kv = (dlina / storona) * (shirina / storona) * storona * storona;
+                Console.WriteLine("Количество квадратовов, которые можно поместить в прямоугольник равно " + ((dlina / storona) * (shirina / storona)));
+                Console.WriteLine("Площадь незанятой части прямоугольника " + (S_pr - S_kv));
+            }
+            else Console.WriteLine("КВАДРАТ НЕ ПОМЕЩАТЬСЯ ХОЗЯЙНА");
+                Console.WriteLine();
+
+            Console.WriteLine("Дан номер некоторого года (целое положительное число). Определить соответствующий ему номер столетия, учитывая, что, к примеру, началом 20 столетия был 1901 год");
+            Console.WriteLine("Введите номер года");
+            n = Convert.ToInt32(Console.ReadLine());
+            
+            int stolet = n / 100;
+            if (n % 100 != 0)
+            {
+                stolet += 1;
+            }
+            Console.WriteLine(stolet+ " столетие");
+            Console.ReadLine();
+        }
+    }
+}
