@@ -1,0 +1,71 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace vvp_zadanie7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Дано значение угла α в градусах (0 < α < 360). Определить значение этого же угла в радианах, учитывая, что 180◦ = π радианов");
+            Console.WriteLine("Введите значение угла альфа в градусах");
+            double a = double.Parse(Console.ReadLine());
+            Console.WriteLine("Значение угла в радианах равно "+a*Math.PI/180);
+            Console.WriteLine();
+
+            Console.WriteLine("Дано значение угла α в радианах (0 < α < 2•π). Определить значение этого же угла в градусах, учитывая, что 180◦ = π радианов");
+            Console.WriteLine("Введите значение угла альфа в радианах");
+            double x = double.Parse(Console.ReadLine());
+            Console.WriteLine("Значение угла в градусах равно " + x / Math.PI * 180);
+            Console.WriteLine();
+
+            Console.WriteLine("Известно, что X кг конфет стоит A рублей. Определить, сколько стоит 1 кг и Y кг этих же конфет.");
+            Console.WriteLine("Введите массу конфет и их цену за эту массу");
+            double weight = double.Parse(Console.ReadLine());
+            double price = double.Parse(Console.ReadLine());
+            Console.WriteLine("Цена за килограмм конфет: "+ price/weight );
+            Console.WriteLine("Введите новую массу конфет, цену которых вы хотите узнать");
+            double weight_new = double.Parse(Console.ReadLine());
+            Console.WriteLine($"Цена за {weight_new} килограмм конфет: " + price*weight_new / weight);
+            Console.WriteLine();
+
+            Console.WriteLine("Скорость первого автомобиля V1 км/ч, второго — V2 км/ч, расстояние между ними S км. Определить расстояние между ними через T часов, если автомобили удаляются друг от друга");
+            Console.WriteLine("Введите скорости 2-х автомобилей");
+            double v1 = double.Parse(Console.ReadLine());
+            double v2 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите время, которое автомобили едут");
+            double t = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите расстояние между автомобилями");
+            double s = double.Parse(Console.ReadLine());
+            Console.WriteLine($"Расстояние между автомобилями через {t} часа(ов) будет "+ ((v1+v2)*t+s) +"км") ;
+            Console.WriteLine();
+
+            Console.WriteLine("Решить линейное уравнение A•x + B = 0, заданное своими коэффициентами A и B (коэффициент A не равен 0)");
+            Console.WriteLine("Введите коэффициетны A и B  в линейном уравнении A*x+B=0");
+            double A = Convert.ToDouble(Console.ReadLine());
+            double B = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Решением уравнения с данными коэф-ми является " + -B/A);
+            Console.WriteLine();
+
+            Console.WriteLine("Найти решение системы линейных уравнений ");
+            Console.WriteLine("Введите коэф-ты при x для уравнений в системе");
+            double A1 = Convert.ToDouble(Console.ReadLine());
+            double A2 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите коэф-ты при y для уравнений в системе");
+            double B1 = Convert.ToDouble(Console.ReadLine());
+            double B2 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите значение правых частей уравнений в системе");
+            double C1 = Convert.ToDouble(Console.ReadLine());
+            double C2 = Convert.ToDouble(Console.ReadLine());
+            double opredel = A1 * B2 - A2 * B1;
+            double opredel1 = C1 * B2 - C2 * B1;
+            double opredel2 = A1 * C2 - A2 * C1;
+            Console.WriteLine("Первое решение системы: "+ (opredel1/opredel));
+            Console.WriteLine("Второе решение системы: "+ (opredel2/opredel));
+
+        }
+    }
+}
