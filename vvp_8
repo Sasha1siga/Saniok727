@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace vvp_zadanie8
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Дан размер файла в байтах. Найти количество полных килобайтов, которые занимает данный файл");
+            Console.WriteLine("Введите количество байтов в файле");
+            int i = int.Parse(Console.ReadLine());
+            if (i % 1024 ==0)
+            Console.WriteLine("Целое количество килобайт в файле равно "+ (i / 1024 ));
+            else Console.WriteLine("Целое количество килобайт в файле равно " + (i / 1024 + 1));
+            Console.WriteLine();
+
+            Console.WriteLine("Даны целые положительные числа A и B (A > B). На отрезке длины A размещено максимально возможное количество отрезков длины B (без наложений). Найти количество отрезков B, размещенных на отрезке A");
+            Console.WriteLine("Введите длину отрезка А");
+            int A = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите длину отрезка B");
+            int B = int.Parse(Console.ReadLine());
+            Console.WriteLine("Количество отрезков B, размещенных на отрезке A равно "+ A / B);
+            Console.WriteLine();
+
+            Console.WriteLine("Даны целые положительные числа A и B (A > B). На отрезке длины A размещено максимально возможное количество отрезков длины B (без наложений). Найти длину незанятой части отрезка A");
+            Console.WriteLine("Введите длину отрезка А");
+             A = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите длину отрезка B");
+             B = int.Parse(Console.ReadLine());
+            int count = A / B;
+            Console.WriteLine("Длина незанятой части отрезка A равна " + (A-B*count));
+            Console.WriteLine();
+
+            Console.WriteLine("Дано двузначное число. Вывести число, полученное при перестановке цифр исходного числа");
+            Console.WriteLine("Введите число");
+            A = int.Parse(Console.ReadLine());
+            int a = A / 10;
+            int b = A % 10;
+            Console.WriteLine("Число, полученное при перестановке цифр исходного числа:"+ (b*10+a));
+            Console.WriteLine();
+
+            Console.WriteLine("Дано трехзначное число. В нем зачеркнули первую слева цифру и приписали ее справа. Вывести полученное число");
+            Console.WriteLine("Введите число");
+            A = int.Parse(Console.ReadLine());
+            a = A / 100;
+            Console.WriteLine("Если первую цифру числа поставить на последнее место, то получится: " + ((A-100*a)*10+a));
+            Console.WriteLine();
+            Console.ReadLine();
+        }
+    }
+}
