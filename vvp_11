@@ -1,0 +1,158 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace vvp_zadanie11
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Console.WriteLine("Даны две переменные целого типа: A и B. Если их значения не равны, то присвоить каждой переменной большее из этих значений, а если равны, то присвоить переменным нулевые значения. Вывести новые значения переменных A и B");
+            Console.WriteLine("Введите значение переменной А");
+            int A = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите значение переменной В");
+            int B = int.Parse(Console.ReadLine());
+            if (A!=B)
+            {
+                if (A>B)
+                {
+                    Console.WriteLine($"Значение переменной А равно {A}");
+                    Console.WriteLine($"Значение переменной B равно {A}");
+                }
+                else
+                {
+                    Console.WriteLine($"Значение переменной A равно {B}");
+                    Console.WriteLine($"Значение переменной B равно {B}");
+                }
+                
+            }
+            else
+            {
+                Console.WriteLine($"Значение переменной A равно {0}");
+                Console.WriteLine($"Значение переменной B равно {0}");
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Даны три числа. Найти сумму двух наибольших из них");
+            Console.WriteLine("Введите значение трех чисел");
+             A = int.Parse(Console.ReadLine());
+             B = int.Parse(Console.ReadLine());
+            int C = int.Parse(Console.ReadLine());
+            int t;
+            if (A>B)
+            {
+            }
+            else
+            {
+                t = A;
+                A = B;
+                B = t;
+            }
+            if (B>C)
+            {
+            }
+            else
+            {
+                t = B;
+                B = C;
+                C = t;
+            }
+            Console.WriteLine("Сумма больших из них равна "+ (A+B));
+            Console.WriteLine();
+
+            Console.WriteLine("На плоскости расположены три точки: A, B, C. Определить, какая из двух последних точек (B или C) расположена ближе к A, и вывести эту точку и ее расстояние от точки A.");
+            Console.WriteLine("Введите координаты точки А");
+            double x1 = double.Parse(Console.ReadLine());
+            double y1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите координаты точки B");
+            double x2 = double.Parse(Console.ReadLine());
+            double y2 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите координаты точки C");
+            double x3 = double.Parse(Console.ReadLine());
+            double y3 = double.Parse(Console.ReadLine());
+            double AB = Math.Sqrt(Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2));
+            double AC = Math.Sqrt(Math.Pow(x1 - x3, 2) + Math.Pow(y1 - y3, 2));
+            if (AB<AC)
+            {
+                Console.WriteLine("Ближе к точке А находится точка В");
+                Console.WriteLine(" Расстояние АВ равно "+ AB);
+            }
+            else
+            {
+                Console.WriteLine("Ближе к точке А находится точка C");
+                Console.WriteLine(" Расстояние АВ равно " + AC);
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Даны координаты точки, не лежащей на координатных осях OX и OY. Определить номер координатной четверти, в которой находится данная точка");
+            Console.WriteLine("Введите координаты точки");
+            x1 = double.Parse(Console.ReadLine());
+            y1 = double.Parse(Console.ReadLine());
+            if (x1>0 && y1>0)
+            {
+                Console.WriteLine("точка находится в 1 четверти");
+            }
+            else if (x1 < 0 && y1 > 0)
+            {
+                Console.WriteLine("точка находится во 2 четверти");
+            }
+            else if (x1 < 0 && y1 < 0)
+            {
+                Console.WriteLine("точка находится в 3 четверти");
+            }
+            else if (x1 > 0 && y1 < 0)
+            {
+                Console.WriteLine("точка находится в 4 четверти");
+            }
+            Console.WriteLine();
+            
+            Console.WriteLine("Дано целое число. Вывести его строку-описание вида «отрицательное четное число», «нулевое число», «положительное нечетное число» и т. д.");
+            string chet = "четное число";
+            string nechet = "нечетное число";
+            string polozh = "Положительное ";
+            string otrecat = "Отрицательное ";
+            Console.WriteLine("Введите целое число");
+            int chislo = int.Parse(Console.ReadLine());
+            if (chislo > 0)
+            {
+                Console.Write(polozh);
+            }
+            else if (chislo < 0) Console.Write(otrecat);
+            else
+            {
+                Console.Write("Нулевое число");
+            }    
+            if (chislo % 2 == 0 && chislo!= 0)
+            {
+                Console.Write(chet);
+            }
+            else if (chislo != 0) Console.Write(nechet);
+            Console.WriteLine();
+            
+            Console.WriteLine("Дано целое число, лежащее в диапазоне 1–999. Вывести его строкуописание вида «четное двузначное число», «нечетное трехзначное число» и т. д.");
+            Console.WriteLine("Введите целое число");
+            chislo = int.Parse(Console.ReadLine());
+            if (chislo % 2 == 0)
+            {
+                Console.Write("четное ");
+            }
+            else Console.Write("нечетное ");
+            if (chislo / 10 == 0)
+            {
+                Console.WriteLine("однозначное число");
+            }
+            if (chislo / 100 == 0)
+            {
+                Console.WriteLine("двузначное число");
+            }
+            if (chislo / 1000 == 0)
+            {
+                Console.WriteLine("трехзначное число");
+            }
+        }
+    }
+}
