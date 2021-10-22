@@ -1,0 +1,79 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace vvp_zadanie5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Задание 1");
+            Console.WriteLine("Координаты первой точки:");
+            double x1 = double.Parse(Console.ReadLine());
+            double y1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Координаты второй точки:");
+            double x2 = double.Parse(Console.ReadLine());
+            double y2 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Ростраяние между точками равно "+Math.Sqrt(Math.Pow(x1-x2,2)+ Math.Pow(y1 - y2,2)));
+            Console.WriteLine();
+
+            Console.WriteLine("Задание 2");
+            Console.Write("Введите координату точки A на числовой оси:");
+            x1 = double.Parse(Console.ReadLine());
+            Console.Write("Введите координату точки B на числовой оси:");
+            x2 = double.Parse(Console.ReadLine());
+            Console.Write("Введите координату точки C на числовой оси:");
+            double x3 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Длинна отрезка AC равна "+ Math.Abs(x1-x3));
+            Console.WriteLine("Длинна отрезка BC равна "+ Math.Abs(x2 - x3));
+            Console.WriteLine("Сумма длин 2-х найденных отрезков равна "+ (Math.Abs(x1 - x3)+ Math.Abs(x2 - x3)));
+            Console.WriteLine();
+
+            Console.WriteLine("Задание 3");
+            Console.Write("Введите координату точки A на числовой оси:");
+            x1 = double.Parse(Console.ReadLine());
+            Console.Write("Введите координату точки B на числовой оси:");
+            x2 = double.Parse(Console.ReadLine());
+            Console.Write("Введите координату точки C на числовой оси:");
+            x3 = double.Parse(Console.ReadLine());
+            if ((x3>x1) && x3<x2|| (x3 < x1) && x3 > x2)
+            Console.WriteLine("Произведение длин отрезков AC и BC равно "+Math.Abs(x1 - x3)* Math.Abs(x2 - x3));
+            else Console.WriteLine("Точка С находится вне АВ ");
+            Console.WriteLine();
+
+            Console.WriteLine("Задание 4");
+            Console.WriteLine("Введите координаты 1-ой вершины прямоугольника");
+            x1 = double.Parse(Console.ReadLine());
+            y1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите координаты 2-ой вершины прямоугольника");
+            x2 = double.Parse(Console.ReadLine());
+            y2 = double.Parse(Console.ReadLine());
+            double dlina = Math.Abs(x1 - x2);
+            double shirina = Math.Abs(y1 - y2);
+            Console.WriteLine("Периметр прямоугольника равен " +2*(dlina + shirina));
+            Console.WriteLine("Площадь прямоугольника равна " + (dlina * shirina));
+            Console.WriteLine();
+
+            Console.WriteLine("Задание 5");
+            Console.WriteLine("Введите координаты 1-ой вершины треугольника");
+            x1 = double.Parse(Console.ReadLine());
+            y1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите координаты 2-ой вершины треугольника");
+            x2 = double.Parse(Console.ReadLine());
+            y2 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите координаты 3-ей вершины треугольника");
+            x3 = double.Parse(Console.ReadLine());
+            double y3 = double.Parse(Console.ReadLine());
+            double StoronaVs2 = Math.Sqrt(Math.Pow(x1 - x3, 2) + Math.Pow(y1 - y3, 2));
+            double StoronaVs1 = Math.Sqrt(Math.Pow(x2 - x3, 2) + Math.Pow(y2 - y3, 2));
+            double StoronaVs3 = Math.Sqrt(Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2));
+            double poluPerim = (StoronaVs1 + StoronaVs2 + StoronaVs3) / 2;
+            Console.WriteLine("Периметр треугольника равен "+ (poluPerim*2));
+            Console.WriteLine("Площадь треугольника равна "+(Math.Sqrt(poluPerim*(poluPerim-StoronaVs1)*(poluPerim-StoronaVs2)* (poluPerim-StoronaVs3))));
+
+        }
+    }
+}
