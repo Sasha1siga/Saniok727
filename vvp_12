@@ -1,0 +1,460 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace vvp_12
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Дан номер дня – целое число от 1 до 31 и месяца — целое число в диапазоне 1–12 (1 — январь, 2 — февраль и т. д.). Вывести дату в виде текста (например, «пятое января»).");
+            Console.WriteLine("Введите дату(сначала день потом месяц)");
+            int day = Convert.ToInt32(Console.ReadLine());
+            int month = Convert.ToInt32(Console.ReadLine());
+            switch (day)
+            {
+                case 1:
+                    Console.Write("первое ");
+                    break;
+                case 2:
+                    Console.Write("второе ");
+                    break;
+                case 3:
+                    Console.Write("третье ");
+                    break;
+                case 4:
+                    Console.Write("четвертое ");
+                    break;
+                case 5:
+                    Console.Write("пятое ");
+                    break;
+                case 6:
+                    Console.Write("шестое ");
+                    break;
+                case 7:
+                    Console.Write("седьмое ");
+                    break;
+                case 8:
+                    Console.Write("восьмое ");
+                    break;
+                case 9:
+                    Console.Write("девятое ");
+                    break;
+                case 10:
+                    Console.Write("десятое ");
+                    break;
+                case 11:
+                    Console.Write("одинадцатое ");
+                    break;
+                case 12:
+                    Console.Write("двенадцатое ");
+                    break;
+                case 13:
+                    Console.Write("тринадцатое ");
+                    break;
+                case 14:
+                    Console.Write("четырнадцатое ");
+                    break;
+                case 15:
+                    Console.Write("пятнадцатое ");
+                    break;
+                case 16:
+                    Console.Write("шеснадцатое ");
+                    break;
+                case 17:
+                    Console.Write("семнадцатое ");
+                    break;
+                case 18:
+                    Console.Write("восемнадцатое ");
+                    break;
+                case 19:
+                    Console.Write("девятнадцатое " );
+                    break;
+                case 20:
+                    Console.Write("двадцатое ");
+                    break;
+                case 21:
+                    Console.Write("двадцать первое ");
+                    break;
+                case 22:
+                    Console.Write("двадцать второе ");
+                    break;
+                case 23:
+                    Console.Write("двадцать третье ");
+                    break;
+                case 24:
+                    Console.Write("двадцать четвертое ");
+                    break;
+                case 25:
+                    Console.Write("двадцать пятое ");
+                    break;
+                case 26:
+                    Console.Write("двадцать шестое ");
+                    break;
+                case 27:
+                    Console.Write("двадцать седьмое ");
+                    break;
+                case 28:
+                    Console.Write("двадцать восьмое " );
+                    break;
+                case 29:
+                    Console.Write("двадцать девятое ");
+                    break;
+                case 30:
+                    Console.Write("тридцатое ");
+                    break;
+                case 31:
+                    Console.Write("тридцать первое ");
+                    break;
+
+                default:
+                    break;
+            }
+            switch (month)
+            {
+                case 1:
+                    Console.Write("января");
+                    break;
+                case 2:
+                    Console.Write("февраля");
+                    break;
+                case 3:
+                    Console.Write("марта");
+                    break;
+                case 4:
+                    Console.Write("апреля");
+                    break;
+                case 5:
+                    Console.Write("мая");
+                    break;
+                case 6:
+                    Console.Write("июня");
+                    break;
+                case 7:
+                    Console.Write("июля");
+                    break;
+                case 8:
+                    Console.Write("августа");
+                    break;
+                case 9:
+                    Console.Write("сентября");
+                    break;
+                case 10:
+                    Console.Write("октября");
+                    break;
+                case 11:
+                    Console.Write("ноября");
+                    break;
+                case 12:
+                    Console.Write("декабря");
+                    break;
+                default:
+                    break;
+            }
+            Console.WriteLine();
+
+            Console.WriteLine(" Робот может перемещаться в четырех направлениях(«С» — север, «З» — запад, «Ю» — юг, «В» — восток) и принимать три цифровые команды: 0 — продолжать движение, 1 — поворот налево, −1 — поворот направо.Дан символ C — исходное направление робота и целое число N — посланная ему команда.Вывести направление робота после выполнения полученной команды");
+            Console.WriteLine("Введите начальное положение робота");
+            string C = Console.ReadLine();  
+            Console.WriteLine("Введите цифровую команду");
+            int N = Convert.ToInt32(Console.ReadLine());
+            if (C =="С")
+            {
+                if (N == 0)
+                {
+                    Console.WriteLine("Направление Север");
+                }
+                else if (N == 1)
+                {
+                    Console.WriteLine("Направление Запад");
+                }
+                else if (N == -1)
+                {
+                    Console.WriteLine("Направление Восток");
+                }
+            }
+            else if (C == "Ю")
+            {
+                if (N == 0)
+                {
+                    Console.WriteLine("Направление Юг");
+                }
+                else if (N == 1)
+                {
+                    Console.WriteLine("Направление Восток");
+                }
+                else if (N == -1)
+                {
+                    Console.WriteLine("Направление Запад");
+                }
+            }
+            else if (C == "З")
+            {
+                if (N == 0)
+                {
+                    Console.WriteLine("Направление запад");
+                }
+                else if (N == 1)
+                {
+                    Console.WriteLine("Направление юг");
+                }
+                else if (N == -1)
+                {
+                    Console.WriteLine("Направление север");
+                }
+            }
+            else if (C == "В")
+            {
+                if (N == 0)
+                {
+                    Console.WriteLine("Направление Восток");
+                }
+                else if (N == 1)
+                {
+                    Console.WriteLine("Направление Север");
+                }
+                else if (N == -1)
+                {
+                    Console.WriteLine("Направление Юг");
+                }
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Дано целое число в диапазоне 10–40, определяющее количество учебных заданий по некоторой теме. Вывести строку-описание указанного количества заданий, обеспечив правильное согласование числа со словами «учебное задание», например: 18 — «восемнадцать учебных заданий».");
+            Console.WriteLine("Введите число учебных заданий");
+            int Count = int.Parse(Console.ReadLine());
+
+            switch (Count)
+            {
+                case 10:
+                    Console.Write(Count + "-десять");
+                    break;
+                case 11:
+                    Console.Write(Count + "-одиннадцать");
+                    break;
+                case 12:
+                    Console.Write(Count + "-двенадцать");
+                    break;
+                case 13:
+                    Console.Write(Count + "-тринадцать");
+                    break;
+                case 14:
+                    Console.Write(Count + "-четырнадцать");
+                    break;
+                case 15:
+                    Console.Write(Count + "-пятнадцать");
+                    break;
+                case 16:
+                    Console.Write(Count + "-шеснадцать");
+                    break;
+                case 17:
+                    Console.Write(Count + "-семнадцать");
+                    break;
+                case 18:
+                    Console.Write(Count + "-восемнадцать");
+                    break;
+                case 19:
+                    Console.Write(Count + "-девятнадцать");
+                    break;
+                case 20:
+                    Console.Write(Count + "-двадцать");
+                    break;
+                case 21:
+                    Console.Write(Count + "-двадцать одно");
+                    break;
+                case 22:
+                    Console.Write(Count + "-двадцать два");
+                    break;
+                case 23:
+                    Console.Write(Count + "-двадцать три");
+                    break;
+                case 24:
+                    Console.Write(Count + "-двадцать четыре");
+                    break;
+                case 25:
+                    Console.Write(Count + "-двадцать пять");
+                    break;
+                case 26:
+                    Console.Write(Count + "-двадцать шесть");
+                    break;
+                case 27:
+                    Console.Write(Count + "-двадцать семь");
+                    break;
+                case 28:
+                    Console.Write(Count + "-двадцать восемь" );
+                    break;
+                case 29:
+                    Console.Write(Count + "-двадцать девять");
+                    break;
+                case 30:
+                    Console.Write(Count + "-тридцать ");
+                    break;
+                case 31:
+                    Console.Write(Count + "-тридцать одно");
+                    break;
+                case 32:
+                    Console.Write(Count + "-тридцать два");
+                    break;
+                case 33:
+                    Console.Write(Count + "-тридцать три");
+                    break;
+                case 34:
+                    Console.Write(Count + "-тридцать четныре");
+                    break;
+                case 35:
+                    Console.Write(Count + "-тридцать пять");
+                    break;
+                case 36:
+                    Console.Write(Count + "-тридцать шесть");
+                    break;
+                case 37:
+                    Console.Write(Count + "-тридцать семь");
+                    break;
+                case 38:
+                    Console.Write(Count + "-тридцать восемь");
+                    break;
+                case 39:
+                    Console.Write(Count + "-тридцать девять");
+                    break;
+                case 40:
+                    Console.Write(Count + "-сорок");
+                    break;
+                default:
+                    break;
+            }
+            
+            
+                Console.Write(" учебных заданий");
+            Console.WriteLine();
+
+
+            Console.WriteLine("Дано целое число в диапазоне 100–999. Вывести строку-описание данного числа, например: 256 — «двести пятьдесят шесть», 814 — «восемьсот четырнадцать».");
+            Console.WriteLine("Введите трехзначное число");
+            int A = int.Parse(Console.ReadLine());
+            if (A / 100==1)
+                Console.WriteLine("сто");
+            if (A / 100 == 2)
+                Console.WriteLine("двести");
+            if (A / 100 == 3)
+                Console.WriteLine("тристо");
+            if (A / 100 == 4)
+                Console.WriteLine("четыресто");
+            if (A / 100 == 5)
+                Console.WriteLine("пятьсот");
+            if (A / 100 == 6)
+                Console.WriteLine("шестсот");
+            if (A / 100 == 7)
+                Console.WriteLine("семьсот");
+            if (A / 100 == 8)
+                Console.WriteLine("восемьсот");
+            if (A / 100 == 9)
+                Console.WriteLine("девятьсот");
+
+            if (A % 100 == 10)
+                Console.WriteLine("десять");
+            if (A % 100 == 11)
+                Console.WriteLine("одиннадцать");
+            if (A % 100 == 12)
+                Console.WriteLine("двенадцать");
+            if (A % 100 == 13)
+                Console.WriteLine("тринадцать");
+            if (A % 100 == 14)
+                    Console.WriteLine("четырнадцать");
+            if (A % 100 == 15)
+                Console.WriteLine("пятнадцать");
+            if (A % 100 == 16)
+                Console.WriteLine("шеснадцать");
+            if (A % 100 == 17)
+                Console.WriteLine("семнадцать");
+            if (A % 100 == 18)
+                Console.WriteLine("восемнадцать");
+            if (A % 100 == 19)
+                Console.WriteLine("девятнадцать");
+
+
+            if ((A % 100)/10  == 2)
+                Console.WriteLine("двадцать");
+            if ((A % 100) / 10 == 3)
+                Console.WriteLine("тридцать");
+            if ((A % 100) / 10 == 4)
+                Console.WriteLine("сорок");
+            if ((A % 100) / 10 == 5)
+                Console.WriteLine("пятьдесят");
+            if ((A % 100) / 10 ==6)
+                Console.WriteLine("шестьдесят");
+            if ((A % 100) / 10 == 7)
+                Console.WriteLine("семьдесят");
+            if ((A % 100) / 10 == 8)
+                Console.WriteLine("восемьдесят");
+            if ((A % 100) / 10 == 9)
+                Console.WriteLine("девяносто");
+
+            if (A % 10 == 1 && (A % 100) /10 != 1)
+                Console.WriteLine("один");
+            if (A % 10 == 2 && (A % 100) / 10 != 1)
+                Console.WriteLine("два");
+            if (A % 10 == 3 && (A % 100) / 10 != 1)
+                Console.WriteLine("три");
+            if (A % 10 == 4 && (A % 100) / 10 != 1)
+                Console.WriteLine("четыре");
+            if (A % 10 == 5 && (A % 100) / 10 != 1)
+                Console.WriteLine("пять");
+            if (A % 10 == 6 && (A % 100) / 10 != 1)
+                Console.WriteLine("шесть");
+            if (A % 10 == 7 && (A % 100) / 10 != 1)
+                Console.WriteLine("семь");
+            if (A % 10 == 8 && (A % 100) / 10 != 1)
+                Console.WriteLine("восемь");
+            if (A % 10 == 9 && (A % 100) / 10 != 1)
+                Console.WriteLine("девять");
+            Console.WriteLine();
+
+
+            Console.WriteLine("В восточном календаре принят 60-летний цикл, состоящий из 12- летних подциклов, обозначаемых названиями цвета: зеленый, красный, желтый, белый и черный. В каждом подцикле годы носят названия животных: крысы, коровы, тигра, зайца, дракона, змеи, лошади, овцы, обезьяны, курицы, собаки и свиньи. По номеру года определить его название, если 1984 год — начало цикла: «год зеленой крысы».");
+            Console.WriteLine("Введите номер года");
+            int year = int.Parse(Console.ReadLine()); 
+            int razn = Math.Abs(1984 - year)%60;
+            int color = razn / 12;
+            int pet = razn-(razn / 12)*12;
+            Console.Write("год ");
+            if (color+1 == 1 )
+                Console.Write("зеленой(ого) ");
+            if (color + 1 == 2)
+                Console.Write("красной(ого) ");
+            if (color + 1 == 3)
+                Console.Write("желтой(ого) ");
+            if (color + 1 == 4)
+                Console.Write("белой(ого) ");
+            if (color + 1 == 5)
+                Console.Write("черной(ого) ");
+
+            if(pet + 1 == 1)
+                Console.Write("крысы");
+            if (pet + 1 == 2)
+                Console.Write("коровы");
+            if (pet + 1 == 3)
+                Console.Write("тигра");
+            if (pet + 1 == 4)
+                Console.WriteLine("зайца");
+            if (pet + 1 == 5)
+                Console.Write("дракона");
+            if (pet + 1 == 6)
+                Console.Write("змеи");
+            if (pet + 1 == 7)
+                Console.Write("лошади");
+            if (pet + 1 == 8)
+                Console.Write("овцы");
+            if (pet + 1 == 9)
+                Console.Write("обезьяны");
+            if (pet + 1 == 10)
+                Console.Write("курицы");
+            if (pet + 1 == 11)
+                Console.Write("собаки ");
+            if (pet + 1 == 12)
+                Console.Write("свиньи");
+        }
+    }
+}
