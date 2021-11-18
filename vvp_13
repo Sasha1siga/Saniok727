@@ -1,0 +1,73 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace vvp_13
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Дано вещественное число — цена 1 кг конфет. Вывести стоимость 0.1, 0.2, . . . , 1 кг конфет.");
+            Console.WriteLine("Введите стоимость килограмма конфет");
+            double money = double.Parse(Console.ReadLine());
+            for (double i = 0.1; i < 1 ; i+=0.1)
+            {
+                Console.WriteLine($"стоимость {i} кг конфет равна {money*i}");
+            }
+            Console.WriteLine();
+
+            Console.WriteLine(" Дано целое число N (> 0). Найти произведение 1.1 • 1.2 • 1.3 • . . . (N сомножителей).");
+            Console.WriteLine("Введите N");
+            int N = int.Parse(Console.ReadLine());
+            double pr = 1.1;
+            double sum = 1;
+            for (int i = 0; i < N; i++)
+            {
+                sum *= pr;
+                pr += 0.1;
+            }
+            Console.WriteLine(sum);
+            Console.WriteLine();
+
+            Console.WriteLine("Дано целое число N (> 0). Найти квадрат данного числа, используя для его вычисления следующую формулу: N2 = 1 + 3 + 5 + . . . + (2•N − 1). После добавления к сумме каждого слагаемого выводить текущее значение суммы");
+            Console.WriteLine("Введите целое число N");
+            N = int.Parse(Console.ReadLine());
+            sum = 0;
+            for (int i = 1; i <= 2*N-1; i+=2)
+            {
+                sum += i;
+                Console.WriteLine(sum);
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Дано вещественное число A и целое число N (> 0). Используя один цикл, найти сумму 1 + A + A2 + A3 + . . . + AN");
+            Console.WriteLine("Введите целое число N");
+            N = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите вецественное А");
+            double A = double.Parse(Console.ReadLine());
+            sum = 0;
+            for (double i = 0; i <= N; i++)
+            {
+                sum += Math.Pow(A, i);
+            }
+            Console.WriteLine("сумма равна"+sum);
+            Console.WriteLine();
+
+            Console.WriteLine("то же что в предыдущим но с разными знаками");
+            Console.WriteLine("Введите целое число N");
+            N = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите вецественное А");
+            A = double.Parse(Console.ReadLine());
+            sum = 0;
+            for (double i = 0; i <= N ; i++)
+            {
+                sum += Math.Pow(-A, i);
+            }
+            Console.WriteLine("сумма равна" + sum);
+            Console.WriteLine();
+        }
+    }
+}
